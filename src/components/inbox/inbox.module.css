@@ -1,0 +1,18 @@
+.inbox_container {
+  width: 93%;
+  /* margin-top: 100px; */
+  /* background-color: black; */
+  margin-left: auto;
+  height: 100vh;
+}
+
+.inbox_menu {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid #e0e0e0;
+  padding-top: 100px;
+}
+
+.compose_btn {
+  padding: 10px 20px;
+}

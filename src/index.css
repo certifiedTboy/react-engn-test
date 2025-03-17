@@ -13,3 +13,26 @@
   font-weight: bold;
   font-style: normal;
 }
+
+/* Entire scrollbar */
+::-webkit-scrollbar {
+  width: 3px; /* Width for vertical scrollbar */
+  height: 3px; /* Height for horizontal scrollbar */
+}
+
+/* Scrollbar track (the background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Scrollbar handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
