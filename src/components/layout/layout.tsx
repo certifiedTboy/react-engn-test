@@ -3,14 +3,13 @@ import SideBar from "./SiderBar";
 
 const Layout = () => {
   return (
-    <>
-      <header>
-        <Header />
-      </header>
-      <aside>
+    <div className="w-full h-full">
+      <Header />
+
+      <aside className="">
         <SideBar />
       </aside>
-    </>
+    </div>
   );
 };
 
