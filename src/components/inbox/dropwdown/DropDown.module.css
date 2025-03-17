@@ -1,0 +1,29 @@
+.dropdown_option_container {
+  margin-top: 20px;
+}
+
+.active_option {
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  color: #000;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.option {
+  padding: 10px 20px;
+  color: #666666;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  /* font-weight: 600; */
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f4f4f4;
+}
