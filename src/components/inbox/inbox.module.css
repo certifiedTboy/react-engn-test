@@ -4,6 +4,8 @@
   /* background-color: black; */
   margin-left: auto;
   height: 100vh;
+  display: flex;
+  gap: 10px;
 }
 
 .inbox_menu {
@@ -21,4 +23,5 @@
 
 .inbox_menu_container {
   padding-left: 25px;
+  margin-top: 30px;
 }

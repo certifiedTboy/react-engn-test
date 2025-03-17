@@ -13,7 +13,7 @@ const InboxMenuDropDown: React.FC<{
   return (
     <div className="w-full">
       <button
-        className="flex items-center gap-3"
+        className="flex items-center gap-3 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <AppIcon value={{ color: "#000", size: "1.3em" }}>

@@ -5,7 +5,7 @@ import styles from "./layout.module.css";
 const Header = () => {
   return (
     <header
-      className={`${styles.header} fixed top-0 left-0 right-0 w-[93%] flex justify-between items-center p-4 h-[80px] drop-shadow-sm`}
+      className={`${styles.header} fixed top-0 left-0 right-0 w-[93%] z-10 flex justify-between items-center p-4 h-[80px] drop-shadow-sm`}
     >
       <div>
         <h1 className={`${styles.header_title} text-2xl font-bold`}>
