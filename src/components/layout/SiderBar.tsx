@@ -17,7 +17,7 @@ import styles from "./layout.module.css";
 
 const SideBar = () => {
   return (
-    <nav
+    <aside
       className={`${styles.side_bar} fixed top-0 left-0 bottom-0 w-[7%] flex flex-col gap-10 items-center  bg-[#fff]  `}
     >
       <div style={{ marginTop: "1.5rem" }}>
@@ -81,7 +81,7 @@ const SideBar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </aside>
   );
 };
 

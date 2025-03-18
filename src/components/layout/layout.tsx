@@ -9,10 +9,9 @@ const Layout = () => {
     <>
       <Header />
 
-      <aside>
-        <SideBar />
-      </aside>
       <main>
+        <SideBar />
+
         <AppRoutes />
       </main>
     </>

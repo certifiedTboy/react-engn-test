@@ -2,6 +2,7 @@ import { useContext } from "react";
 import InboxMenu from "./InboxMenu";
 import MessageList from "./messages/MessageList";
 import { MessageOptionContext } from "../../context/toggle-inbox-context";
+import InboxMessage from "./messages/InboxMessage";
 import styles from "./inbox.module.css";
 
 const Inbox = () => {
@@ -11,6 +12,7 @@ const Inbox = () => {
     <section className={`${styles.inbox_container}  fixed top-0 left-0 `}>
       <InboxMenu />
       {optionIsOpen && showAllInbox && <MessageList />}
+      <InboxMessage />
     </section>
   );
 };
