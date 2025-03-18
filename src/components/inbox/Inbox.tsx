@@ -8,9 +8,7 @@ const Inbox = () => {
   const { optionIsOpen, showAllInbox } = useContext(MessageOptionContext);
 
   return (
-    <section
-      className={`${styles.inbox_container} fixed top-0 left-30 bottom-0 `}
-    >
+    <section className={`${styles.inbox_container}  fixed top-0 left-0 `}>
       <InboxMenu />
       {optionIsOpen && showAllInbox && <MessageList />}
     </section>

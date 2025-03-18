@@ -1,6 +1,6 @@
 .inbox_container {
   width: 93%;
-  margin-left: auto;
+  margin-left: 100px;
   height: 100%;
   display: flex;
   gap: 10px;
@@ -22,6 +22,7 @@
 .inbox_menu_container {
   padding-left: 25px;
   margin-top: 30px;
+  padding-bottom: 30px;
 }
 
 .toggle_btn {

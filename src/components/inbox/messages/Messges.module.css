@@ -1,13 +1,14 @@
 .message_list_container {
-  margin-top: 100px;
+  margin-top: 80px;
   border-right: 1px solid #e0e0e0;
-  /* padding-top: 100px; */
   padding: 0 10px;
-  margin-bottom: 100px;
+
+  height: 100vh;
 }
 
 .message_list {
   margin-top: 40px;
+  height: 70%;
 }
 
 .message_card {

@@ -17,7 +17,7 @@ const InboxMenu = () => {
           </div>
 
           <div
-            className={`flex flex-col items-start gap-5 ${styles.inbox_menu_container} overflow-x-scroll`}
+            className={`flex flex-col items-start gap-5 ${styles.inbox_menu_container} relative  overflow-x-scroll`}
           >
             <InboxMenuDropDown name="Primary" />
             <InboxMenuDropDown name="Channels" />
