@@ -6,3 +6,8 @@ export interface AppIconProps {
 export interface DropDownOptionProps {
   name: string;
 }
+
+export interface SEOData {
+  title?: string;
+  metaDescription?: string;
+}
