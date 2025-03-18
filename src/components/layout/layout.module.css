@@ -6,10 +6,14 @@
   margin-left: auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 1rem 0.5rem 1rem 6.5rem;
+  }
+}
+
 .side_bar {
   border-right: 1px solid #e0e0e0;
-  /* z-index: 100; */
-  /* padding: 0 10px; */
 }
 
 .toggle_btn {
