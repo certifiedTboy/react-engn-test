@@ -1,7 +1,8 @@
-import { useContext } from "react";
-import { MessageOptionContext } from "../../../context/toggle-inbox-context";
-import AppIcon from "../../common/AppIcon";
+import { useEffect, useContext } from "react";
 import { TiMessages } from "react-icons/ti";
+import { MessageOptionContext } from "../../../context/toggle-inbox-context";
+import useGetScreenSize from "../../../hooks/useGetScreenSize";
+import AppIcon from "../../common/AppIcon";
 import messageIcon from "../../../assets/images/message.png";
 import userIcon from "../../../assets/images/user-tick.png";
 import circleIcon from "../../../assets/images/tick-circle.svg";
@@ -11,13 +12,24 @@ import addIcon from "../../../assets/images/add.svg";
 import styles from "./DropDown.module.css";
 
 const DropDownOption = () => {
-  const { toggleShowAllInbox } = useContext(MessageOptionContext);
+  const { toggleShowAllInbox, toggleMobileInbox } =
+    useContext(MessageOptionContext);
+  const { handleResize, isOnMobile } = useGetScreenSize();
+
+  useEffect(() => {
+    window.addEventListener("resize", () => handleResize(window.innerWidth));
+
+    return () =>
+      window.removeEventListener("resize", () =>
+        handleResize(window.innerWidth)
+      ); // Cleanup on unmount
+  }, []);
 
   return (
     <div className={`w-full  ${styles.dropdown_option_container}`}>
       <div
         className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.active_option}`}
-        onClick={toggleShowAllInbox}
+        onClick={!isOnMobile ? toggleShowAllInbox : toggleMobileInbox}
       >
         <div className="flex items-center gap-3">
           <AppIcon value={{ color: "#000", size: "1.3em" }}>

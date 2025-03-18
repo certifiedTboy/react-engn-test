@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
-
-interface ListItem {
-  name: string;
-  url: string;
-}
+import { IoIosClose } from "react-icons/io";
+import { MessageOptionContext } from "../../../context/toggle-inbox-context";
+import { MessageDrawerProps } from "../../../interfaces/props-interfaces";
+import MessageCard from "../messages/MessageCard";
+import SearchMessageInput from "../messages/SearchMessgeInput";
+import AppIcon from "../../common/AppIcon";
+import { generateList } from "../../../helpers/generateList";
 
 const SidekickWrapper = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
-  right: 0; /* Keep it aligned to the right */
+  right: 0;
   pointer-events: none;
   z-index: 9999;
   display: flex;
-  justify-content: flex-end; /* Pushes content to the right */
+  justify-content: flex-end;
 `;
 
 const SidekickBody = styled(motion.div)<{ width: number }>`
@@ -26,7 +28,7 @@ const SidekickBody = styled(motion.div)<{ width: number }>`
   background-color: #fff;
   padding: 40px 60px 30px 30px;
   height: 100%;
-  width: ${({ width }) => `${width}px`}; /* Ensure it has a fixed width */
+  width: ${({ width }) => `${width}px`};
   box-sizing: border-box;
 `;
 
@@ -35,8 +37,10 @@ const MenuHandler = styled(motion.button)`
   background: transparent;
   position: absolute;
   top: 10px;
-  left: -50px; /* Adjusted to keep it visible when closed */
+  left: -50px;
   outline: none;
+  cursor: pointer;
+  margin-left: 60px;
 `;
 
 const sidekickBodyStyles = {
@@ -48,40 +52,64 @@ const sidekickBodyStyles = {
   },
 };
 
-const SideBarList: React.FC<{ data: ListItem[] }> = ({ data }) => (
-  <>
-    {data.map((item, i) => (
-      <div key={i}>{item.name}</div>
-    ))}
-  </>
-);
+const MessageDrawer: React.FC<MessageDrawerProps> = ({ width }) => {
+  const { showMobileInbox, toggleMobileInbox } =
+    useContext(MessageOptionContext);
 
-const MessageDrawer: React.FC<{
-  overlayColor?: string;
-  width?: number;
-  data: ListItem[];
-}> = ({ overlayColor = "transparent", width = 200, data }) => {
-  const [isActive, setIsActive] = useState<boolean>(false);
   const controls = useAnimation();
 
   useEffect(() => {
-    controls.start(isActive ? "active" : "inactive");
-  }, [isActive, controls]);
+    controls.start(showMobileInbox ? "active" : "inactive");
+  }, [showMobileInbox, controls]);
 
   return (
-    <SidekickWrapper>
-      <SidekickBody
-        width={width}
-        animate={controls}
-        variants={sidekickBodyStyles}
-        transition={{ type: "spring", damping: 20, stiffness: 100 }}
-      >
-        <MenuHandler onTap={() => setIsActive((s) => !s)}>
-          {isActive ? "Close" : "Open"}
-        </MenuHandler>
-        <SideBarList data={data} />
-      </SidekickBody>
-    </SidekickWrapper>
+    <div className="block sm:hidden">
+      <SidekickWrapper>
+        <SidekickBody
+          drag="x"
+          dragElastic={0.1}
+          dragConstraints={{
+            left: -width!,
+            right: 0,
+          }}
+          dragMomentum={false}
+          onDragEnd={(_event, info) => {
+            const isDraggingLeft = info.offset.x < 0;
+            const multiplier = isDraggingLeft ? 1 / 4 : 2 / 3;
+            const threshold = width! * multiplier;
+
+            if (Math.abs(info.point.x) > threshold && showMobileInbox) {
+              toggleMobileInbox();
+            } else if (Math.abs(info.point.x) < threshold && !showMobileInbox) {
+              toggleMobileInbox();
+            } else {
+              controls.start(showMobileInbox ? "active" : "inactive");
+            }
+          }}
+          width={width || 300}
+          animate={controls}
+          variants={sidekickBodyStyles}
+          transition={{ type: "spring", damping: 20, stiffness: 100 }}
+        >
+          <MenuHandler onTap={toggleMobileInbox}>
+            {showMobileInbox && (
+              <AppIcon value={{ size: "1.8em", color: "#333" }}>
+                <IoIosClose />
+              </AppIcon>
+            )}
+          </MenuHandler>
+
+          <div className="sticky w-full">
+            <SearchMessageInput />
+          </div>
+          <div className="overflow-x-scroll h-full">
+            {generateList(20).map((item) => {
+              return <MessageCard key={item} />;
+            })}
+          </div>
+        </SidekickBody>
+      </SidekickWrapper>
+    </div>
   );
 };
 

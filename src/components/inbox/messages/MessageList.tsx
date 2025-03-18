@@ -1,5 +1,6 @@
 import MessageCard from "./MessageCard";
 import SearchMessageInput from "./SearchMessgeInput";
+import { generateList } from "../../../helpers/generateList";
 import styles from "./Messges.module.css";
 const MessageList = () => {
   return (
@@ -10,16 +11,9 @@ const MessageList = () => {
         <SearchMessageInput />
       </div>
       <div className={`overflow-x-scroll ${styles.message_list}`}>
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
+        {generateList(20).map((item) => (
+          <MessageCard key={item} />
+        ))}
       </div>
     </div>
   );
