@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { MessageOptionContext } from "../../../context/toggle-inbox-context";
 import AppIcon from "../../common/AppIcon";
 import { TiMessages } from "react-icons/ti";
 import messageIcon from "../../../assets/images/message.png";
@@ -9,10 +11,13 @@ import addIcon from "../../../assets/images/add.svg";
 import styles from "./DropDown.module.css";
 
 const DropDownOption = () => {
+  const { toggleShowAllInbox } = useContext(MessageOptionContext);
+
   return (
     <div className={`w-full ${styles.dropdown_option_container}`}>
       <div
         className={`flex items-center justify-between ${styles.active_option}`}
+        onClick={toggleShowAllInbox}
       >
         <div className="flex items-center gap-3">
           <AppIcon value={{ color: "#000", size: "1.3em" }}>

@@ -35,31 +35,31 @@ const SideBar = () => {
       >
         <div className="flex flex-col gap-5 items-center">
           <div className="cursor-pointer">
-            <img src={gridIcon} alt="grid" className="w-[20px]" />
+            <img src={gridIcon} alt="grid_icon" className="w-[20px]" />
           </div>
 
           <div className="cursor-pointer">
-            <img src={inboxIcon} alt="grid" className="w-[20px]" />
+            <img src={inboxIcon} alt="inbox_icon" className="w-[20px]" />
           </div>
 
           <div className="cursor-pointer">
-            <img src={volumeIcon} alt="grid" className="w-[20px] " />
+            <img src={volumeIcon} alt="volume_icon" className="w-[20px] " />
           </div>
 
           <div className="cursor-pointer">
-            <img src={documentIcon} alt="grid" className="w-[20px] " />
+            <img src={documentIcon} alt="document_icon" className="w-[20px] " />
           </div>
 
           <div className="cursor-pointer">
-            <img src={profileIcon} alt="grid" className="w-[20px] " />
+            <img src={profileIcon} alt="profile_icon" className="w-[20px] " />
           </div>
 
           <div className="cursor-pointer">
-            <img src={documentCopyIcon} alt="grid" className="w-[20px] " />
+            <img src={documentCopyIcon} alt="copy_icon" className="w-[20px] " />
           </div>
 
           <div className="cursor-pointer">
-            <img src={documentTextIcon} alt="grid" className="w-[20px] " />
+            <img src={documentTextIcon} alt="text_icon" className="w-[20px] " />
           </div>
 
           <div className="cursor-pointer">
