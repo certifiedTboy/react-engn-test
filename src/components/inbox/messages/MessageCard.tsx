@@ -5,7 +5,7 @@ const MessageCard = () => {
   return (
     <div className={styles.message_card}>
       <div className="flex items-center justify-between">
-        <p className="font-extrabold text-[13px]">mistalogic@gmail.com</p>
+        <p className="font-bold text-[13px]">mistalogic@gmail.com</p>
         <span className="flex items-center gap-2 text-[#737373]  text-[11px]">
           Now
           <img src={star} />
@@ -14,13 +14,13 @@ const MessageCard = () => {
 
       <div className="max-w-sm">
         <h3
-          className="text-[#666666] text-[12px] font-bold truncate"
+          className="text-[#666666] text-[11px] font-bold truncate"
           style={{ marginTop: "10px" }}
         >
           Haven't gottent my refund
         </h3>
         <p
-          className="text-[#828282] text-[12px] truncate"
+          className="text-[#828282] text-[10px] truncate"
           style={{ marginTop: "10px" }}
         >
           is simply dummy text of the printing and typesetting industry. Lorem

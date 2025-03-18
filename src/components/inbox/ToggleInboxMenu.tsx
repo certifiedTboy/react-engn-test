@@ -1,14 +1,17 @@
+import { useContext } from "react";
 import { FaAngleLeft } from "react-icons/fa6";
+import { MessageOptionContext } from "../../context/toggle-inbox-context";
 import AppIcon from "../common/AppIcon";
-import style from "./inbox.module.css";
+import styles from "./inbox.module.css";
 
 const ToggleInboxMenu = () => {
+  const { toggleMessageOption } = useContext(MessageOptionContext);
   return (
-    <button className="absolute ">
-      <AppIcon value={{ color: "#000", size: "1.3em" }}>
+    <div className={`${styles.toggle_btn}`} onClick={toggleMessageOption}>
+      <AppIcon value={{ color: "#000", size: "1em" }}>
         <FaAngleLeft />
       </AppIcon>
-    </button>
+    </div>
   );
 };
 

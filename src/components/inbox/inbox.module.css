@@ -1,7 +1,5 @@
 .inbox_container {
   width: 93%;
-  /* margin-top: 100px; */
-  /* background-color: black; */
   margin-left: auto;
   height: 100%;
   display: flex;
@@ -24,4 +22,18 @@
 .inbox_menu_container {
   padding-left: 25px;
   margin-top: 30px;
+}
+
+.toggle_btn {
+  margin-top: 110px;
+  margin-left: -20px;
+  z-index: 1;
+  background-color: #f4f4f4;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  cursor: pointer;
+  border-radius: 15px;
 }
