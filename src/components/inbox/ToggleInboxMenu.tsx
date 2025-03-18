@@ -10,9 +10,9 @@ const ToggleInboxMenu = () => {
     useContext(MessageOptionContext);
   return (
     <div
-      className={`${styles.toggle_btn} relative`}
+      className={`${styles.toggle_btn} relative z-50`}
       onClick={toggleMessageOption}
-      style={{ marginLeft: `${optionIsOpen ? "-25px" : "-20px"}` }}
+      style={{ marginLeft: `${optionIsOpen ? "-25px" : "-12px"}` }}
     >
       <AppIcon value={{ color: "#000", size: "1em" }}>
         {optionIsOpen ? <FaAngleLeft /> : <FaAngleRight />}
