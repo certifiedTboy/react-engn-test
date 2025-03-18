@@ -6,6 +6,10 @@
   margin-left: auto;
 }
 
+.header_title {
+  text-shadow: 2px 2px 4px gray;
+}
+
 @media only screen and (max-width: 600px) {
   .header {
     padding: 1rem 0.5rem 1rem 6.5rem;

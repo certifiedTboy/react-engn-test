@@ -1,5 +1,5 @@
 import MessageCard from "./MessageCard";
-import SearchMessageInput from "./SearchMessgeInput";
+import SearchMessageInput from "../search-message/SearchMessgeInput";
 import { generateList } from "../../../helpers/generateList";
 import styles from "./Messges.module.css";
 const MessageList = () => {

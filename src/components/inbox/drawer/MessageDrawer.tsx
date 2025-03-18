@@ -5,7 +5,7 @@ import { IoIosClose } from "react-icons/io";
 import { MessageOptionContext } from "../../../context/toggle-inbox-context";
 import { MessageDrawerProps } from "../../../interfaces/props-interfaces";
 import MessageCard from "../messages/MessageCard";
-import SearchMessageInput from "../messages/SearchMessgeInput";
+import SearchMessageInput from "../search-message/SearchMessgeInput";
 import AppIcon from "../../common/AppIcon";
 import { generateList } from "../../../helpers/generateList";
 

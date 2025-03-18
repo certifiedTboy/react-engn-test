@@ -2,7 +2,8 @@ import { useState } from "react";
 import AppIcon from "../../common/AppIcon";
 import { CiSearch } from "react-icons/ci";
 import { IoFilterSharp } from "react-icons/io5";
-import styles from "./Messges.module.css";
+import SearchFilter from "./SearchFilter";
+import styles from "../messages/Messges.module.css";
 
 const SearchMessageInput = () => {
   const [showFilter, setShowFilter] = useState<boolean>(false);
@@ -32,20 +33,8 @@ const SearchMessageInput = () => {
       </div>
 
       {showFilter && (
-        <div
-          className={`flex justify-between ${styles.search_select_container}`}
-        >
-          <select className={styles.search_select}>
-            <option value="Channel" className={styles.search_option}>
-              Channel
-            </option>
-          </select>
-
-          <select className={styles.search_select}>
-            <option value="Assined to" className={styles.search_option}>
-              Assigned to
-            </option>
-          </select>
+        <div className="flex items-center gap-5" style={{ marginTop: "20px" }}>
+          <SearchFilter field="Channel" /> <SearchFilter field="Assigned to" />
         </div>
       )}
     </div>

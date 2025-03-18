@@ -1,0 +1,36 @@
+.menu_item {
+  width: 300px;
+  perspective: 2000px;
+}
+
+.sub_menu {
+  position: absolute;
+  top: 40px;
+  padding: 5px 10px;
+  background-color: #dcdcdc;
+  border-radius: 6px;
+  width: 100%;
+  transform-origin: 50% -30px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sub_menu:hover {
+  background-color: #d1cfcf;
+}
+
+.filter_select {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #dcdcdc;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 639px) {
+  .filter_select {
+    font-size: 10px;
+  }
+}
