@@ -1,9 +1,18 @@
 import logo from "../../assets/images/logo.png";
+import gridIcon from "../../assets/images/grid.svg";
+import inboxIcon from "../../assets/images/direct-inbox.png";
+import documentIcon from "../../assets/images/document.svg";
+import volumeIcon from "../../assets/images/volume-high.svg";
+import profileIcon from "../../assets/images/profile.svg";
+import documentCopyIcon from "../../assets/images/document-copy.svg";
+import documentTextIcon from "../../assets/images/document-text.svg";
+import signoutIcon from "../../assets/images/signout.png";
 import AppIcon from "../common/AppIcon";
 import { RiSettings3Line } from "react-icons/ri";
 import { GoHorizontalRule } from "react-icons/go";
 import { IoMdPower } from "react-icons/io";
-import { TbLogout2 } from "react-icons/tb";
+
+// import { TbLogout2 } from "react-icons/tb";
 import styles from "./layout.module.css";
 
 const SideBar = () => {
@@ -25,39 +34,51 @@ const SideBar = () => {
         style={{ paddingBottom: "20px" }}
       >
         <div className="flex flex-col gap-5 items-center">
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <RiSettings3Line />
-          </AppIcon>
+          <div className="cursor-pointer">
+            <img src={gridIcon} alt="grid" className="w-[20px]" />
+          </div>
+
+          <div className="cursor-pointer">
+            <img src={inboxIcon} alt="grid" className="w-[20px]" />
+          </div>
+
+          <div className="cursor-pointer">
+            <img src={volumeIcon} alt="grid" className="w-[20px] " />
+          </div>
+
+          <div className="cursor-pointer">
+            <img src={documentIcon} alt="grid" className="w-[20px] " />
+          </div>
+
+          <div className="cursor-pointer">
+            <img src={profileIcon} alt="grid" className="w-[20px] " />
+          </div>
+
+          <div className="cursor-pointer">
+            <img src={documentCopyIcon} alt="grid" className="w-[20px] " />
+          </div>
+
+          <div className="cursor-pointer">
+            <img src={documentTextIcon} alt="grid" className="w-[20px] " />
+          </div>
+
+          <div className="cursor-pointer">
+            <AppIcon value={{ color: "#515050", size: "1.2em" }}>
+              <RiSettings3Line />
+            </AppIcon>
+          </div>
         </div>
 
         <div className="flex flex-col gap-5" style={{ marginTop: "auto" }}>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <IoMdPower />
-          </AppIcon>
-          <AppIcon value={{ color: "#515050", size: "1.3em" }}>
-            <TbLogout2 />
-          </AppIcon>
+          <div className="cursor-pointer">
+            <AppIcon value={{ color: "#515050", size: "1.2em" }}>
+              <IoMdPower />
+            </AppIcon>
+          </div>
+
+          <div className="cursor-pointer">
+            <img src={signoutIcon} alt="grid" className="w-[20px] " />
+          </div>
         </div>
       </div>
     </nav>
