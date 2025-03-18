@@ -26,7 +26,7 @@ const SidekickBody = styled(motion.div)<{ width: number }>`
   z-index: 1;
   pointer-events: all;
   background-color: #fff;
-  padding: 40px 60px 30px 30px;
+  padding: 40px 10px 30px 10px;
   height: 100%;
   width: ${({ width }) => `${width}px`};
   box-sizing: border-box;
@@ -41,6 +41,12 @@ const MenuHandler = styled(motion.button)`
   outline: none;
   cursor: pointer;
   margin-left: 60px;
+`;
+
+const MessageContainer = styled.div`
+  overflow-x: scroll;
+  height: 100%;
+  padding-bottom: 50px;
 `;
 
 const sidekickBodyStyles = {
@@ -64,7 +70,7 @@ const MessageDrawer: React.FC<MessageDrawerProps> = ({ width }) => {
 
   return (
     <div className="block sm:hidden">
-      <SidekickWrapper>
+      <SidekickWrapper className="drop-shadow-md">
         <SidekickBody
           drag="x"
           dragElastic={0.1}
@@ -79,8 +85,6 @@ const MessageDrawer: React.FC<MessageDrawerProps> = ({ width }) => {
             const threshold = width! * multiplier;
 
             if (Math.abs(info.point.x) > threshold && showMobileInbox) {
-              toggleMobileInbox();
-            } else if (Math.abs(info.point.x) < threshold && !showMobileInbox) {
               toggleMobileInbox();
             } else {
               controls.start(showMobileInbox ? "active" : "inactive");
@@ -102,11 +106,11 @@ const MessageDrawer: React.FC<MessageDrawerProps> = ({ width }) => {
           <div className="sticky w-full">
             <SearchMessageInput />
           </div>
-          <div className="overflow-x-scroll h-full">
+          <MessageContainer>
             {generateList(20).map((item) => {
               return <MessageCard key={item} />;
             })}
-          </div>
+          </MessageContainer>
         </SidekickBody>
       </SidekickWrapper>
     </div>
