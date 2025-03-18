@@ -1,5 +1,5 @@
 .header {
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 6.5rem;
   background-color: #fff;
   font-family: "Circular Std", sans-serif;
   border-bottom: 1px solid #e0e0e0;
@@ -8,6 +8,7 @@
 
 .side_bar {
   border-right: 1px solid #e0e0e0;
+  /* z-index: 100; */
   /* padding: 0 10px; */
 }
 

@@ -1,15 +1,15 @@
-import { useContext } from "react";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-import { SidebarContext } from "../../context/toggle-sidebar-context";
+// import { useContext } from "react";
+import { FaAngleRight } from "react-icons/fa6";
+// import { SidebarContext } from "../../context/toggle-sidebar-context";
 import AppIcon from "../common/AppIcon";
 import styles from "./layout.module.css";
 
 const ToggleSideBar = () => {
-  const { toggleSidebar, barIsOpen } = useContext(SidebarContext);
+  // const { toggleSidebar, barIsOpen } = useContext(SidebarContext);
   return (
-    <div className={`${styles.toggle_btn}`}>
+    <div className={`${styles.toggle_btn} `}>
       <AppIcon value={{ color: "#000", size: "1em" }}>
-        {barIsOpen ? <FaAngleLeft /> : <FaAngleRight />}
+        <FaAngleRight />
       </AppIcon>
     </div>
   );

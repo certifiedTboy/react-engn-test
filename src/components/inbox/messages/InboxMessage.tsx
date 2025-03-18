@@ -13,9 +13,9 @@ const InboxMessage = () => {
       } ${
         optionIsOpen && showAllInbox && "w-[50%]"
       } justify-center items-center ${styles.inbox_message}`}
-      style={{
-        marginLeft: `${showAllInbox && optionIsOpen ? "-10px" : "-20px"}`,
-      }}
+      // style={{
+      //   marginLeft: `${showAllInbox && optionIsOpen ? "-10px" : "-20px"}`,
+      // }}
     >
       <div
         className="flex flex-col items-center justify-center gap-5"

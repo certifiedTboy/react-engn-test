@@ -18,7 +18,7 @@ import styles from "./layout.module.css";
 const SideBar = () => {
   return (
     <aside
-      className={`${styles.side_bar} fixed top-0 left-0 bottom-0 w-[7%] flex flex-col gap-10 items-center  bg-[#fff]  `}
+      className={`${styles.side_bar} fixed top-0 left-0 bottom-0 w-[70px] z-10 flex flex-col gap-10 items-center  bg-[#fff]  `}
     >
       <div style={{ marginTop: "1.5rem" }}>
         <img src={logo} alt="app_logo_image" className="w-[33px] h-[36px]" />
