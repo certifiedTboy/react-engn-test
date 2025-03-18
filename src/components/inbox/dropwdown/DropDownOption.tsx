@@ -14,9 +14,9 @@ const DropDownOption = () => {
   const { toggleShowAllInbox } = useContext(MessageOptionContext);
 
   return (
-    <div className={`w-full ${styles.dropdown_option_container}`}>
+    <div className={`w-full  ${styles.dropdown_option_container}`}>
       <div
-        className={`flex items-center justify-between ${styles.active_option}`}
+        className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.active_option}`}
         onClick={toggleShowAllInbox}
       >
         <div className="flex items-center gap-3">
@@ -30,7 +30,9 @@ const DropDownOption = () => {
         <h1 className=""> 345</h1>
       </div>
 
-      <div className={`flex items-center justify-between ${styles.option}`}>
+      <div
+        className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.option}`}
+      >
         <div className="flex items-center gap-3">
           {/* <AppIcon value={{ color: "#666666", size: "1.3em" }}>
             <TiMessages />
@@ -44,7 +46,9 @@ const DropDownOption = () => {
         <h1 className=""> 3</h1>
       </div>
 
-      <div className={`flex items-center justify-between ${styles.option}`}>
+      <div
+        className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.option}`}
+      >
         <div className="flex items-center gap-3">
           {/* <AppIcon value={{ color: "#666666", size: "1.3em" }}>
             <TiMessages />
@@ -58,7 +62,9 @@ const DropDownOption = () => {
         {/* <h1 className=""> 345</h1> */}
       </div>
 
-      <div className={`flex items-center justify-between ${styles.option}`}>
+      <div
+        className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.option}`}
+      >
         <div className="flex items-center gap-3">
           {/* <AppIcon value={{ color: "#666666", size: "1.3em" }}>
             <TiMessages />
@@ -72,7 +78,9 @@ const DropDownOption = () => {
         {/* <h1 className=""> 345</h1> */}
       </div>
 
-      <div className={`flex items-center justify-between ${styles.option}`}>
+      <div
+        className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.option}`}
+      >
         <div className="flex items-center gap-3">
           {/* <AppIcon value={{ color: "#666666", size: "1.3em" }}>
             <TiMessages />
@@ -86,7 +94,9 @@ const DropDownOption = () => {
         {/* <h1 className=""> 345</h1> */}
       </div>
 
-      <div className={`flex items-center justify-between ${styles.option}`}>
+      <div
+        className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.option}`}
+      >
         <div className="flex items-center gap-3">
           {/* <AppIcon value={{ color: "#666666", size: "1.3em" }}>
             <TiMessages />
@@ -98,7 +108,9 @@ const DropDownOption = () => {
         <h1 className="">1</h1>
       </div>
 
-      <div className={`flex items-center justify-between ${styles.option}`}>
+      <div
+        className={`flex items-center justify-between text-[10px] lsm:text-[12px] lg:text-[14px] ${styles.option}`}
+      >
         <div className="flex items-center gap-3">
           {/* <AppIcon value={{ color: "#666666", size: "1.3em" }}>
             <TiMessages />
@@ -106,7 +118,7 @@ const DropDownOption = () => {
 
           <img src={addIcon} width="10px" />
 
-          <h1 className="font-bold text-[13px]">Add Block</h1>
+          <h1 className="font-bold text-[10px] md:text-[13px]">Add Block</h1>
         </div>
 
         {/* <h1 className="">1</h1> */}

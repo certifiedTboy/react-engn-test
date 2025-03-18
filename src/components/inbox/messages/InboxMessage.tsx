@@ -13,8 +13,14 @@ const InboxMessage = () => {
       } ${
         optionIsOpen && showAllInbox && "w-[50%]"
       } justify-center items-center ${styles.inbox_message}`}
+      style={{
+        marginLeft: `${showAllInbox && optionIsOpen ? "-10px" : "-20px"}`,
+      }}
     >
-      <div className="flex flex-col items-center gap-5">
+      <div
+        className="flex flex-col items-center justify-center gap-5"
+        style={{ marginTop: "-150px" }}
+      >
         <img src={chatIcon} alt="chat_icon" className="w-[100px]" />
 
         <h3 className="text-[15px] font-bold text-[#666666]">

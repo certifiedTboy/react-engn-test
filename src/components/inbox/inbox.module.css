@@ -25,6 +25,16 @@
   padding-bottom: 30px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .inbox_container {
+    margin-left: 60px;
+  }
+
+  .inbox_menu_container {
+    padding-left: 10px;
+  }
+}
+
 .toggle_btn {
   margin-top: 110px;
   /* margin-left: -20px; */

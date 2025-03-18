@@ -12,14 +12,16 @@ const InboxMenuDropDown: React.FC<{
   return (
     <>
       <button
-        className="flex items-center gap-3 cursor-pointer"
+        className="flex items-center gap-0 md:gap-3 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <AppIcon value={{ color: "#000", size: "1.3em" }}>
           {!isOpen ? <GoTriangleRight /> : <GoTriangleDown />}
         </AppIcon>
 
-        <h1 className="text-[15px] font-bold"> {name}</h1>
+        <h1 className="text-[10px] lsm:text-[12px] lg:text-[14px] font-bold">
+          {name}
+        </h1>
       </button>
 
       <>{isOpen && <DropDownOption />}</>

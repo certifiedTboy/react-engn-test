@@ -16,11 +16,13 @@ const Header = () => {
     >
       <div className="flex items-center gap-3">
         <ToggleSideBar />
-        <h1 className={`${styles.header_title} text-2xl font-bold`}>
+        <h1
+          className={`${styles.header_title} text-[15px] md:text-2xl font-bold`}
+        >
           Shared Inbox
         </h1>
       </div>
-      <div className="flex items-center space-x-4 gap-14">
+      <div className="hidden sm:flex items-center space-x-4 gap-14 ">
         <button
           type="button"
           className="relative inline-flex items-center p-3 text-sm font-medium text-center text-white  cursor-pointer"
