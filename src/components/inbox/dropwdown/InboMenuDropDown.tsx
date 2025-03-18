@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { GoTriangleDown, GoTriangleRight } from "react-icons/go";
 import DropDownOption from "./DropDownOption";
+import { DropDownOptionProps } from "../../../interfaces/props-interfaces";
 
 import AppIcon from "../../common/AppIcon";
 
-const InboxMenuDropDown: React.FC<{
-  name: string;
-}> = ({ name }) => {
+const InboxMenuDropDown: React.FC<DropDownOptionProps> = ({ name }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (

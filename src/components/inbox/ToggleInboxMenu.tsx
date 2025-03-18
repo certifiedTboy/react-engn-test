@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-
 import { MessageOptionContext } from "../../context/toggle-inbox-context";
 import AppIcon from "../common/AppIcon";
 import styles from "./inbox.module.css";

@@ -7,7 +7,7 @@ import styles from "./layout.module.css";
 const ToggleSideBar = () => {
   // const { toggleSidebar, barIsOpen } = useContext(SidebarContext);
   return (
-    <div className={`${styles.toggle_btn} `}>
+    <div className={`${styles.toggle_btn} z-20`}>
       <AppIcon value={{ color: "#000", size: "1em" }}>
         <FaAngleRight />
       </AppIcon>

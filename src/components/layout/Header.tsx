@@ -2,7 +2,7 @@
 // import { SidebarContext } from "../../context/toggle-sidebar-context";
 import AppIcon from "../common/AppIcon";
 import { IoNotificationsOutline } from "react-icons/io5";
-import ToggleSideBar from "./ToggleSideBar";
+// import ToggleSideBar from "./ToggleSideBar";
 import styles from "./layout.module.css";
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
       z-10 flex justify-between items-center h-[80px] drop-shadow-sm`}
     >
       <div className="flex items-center gap-3">
-        <ToggleSideBar />
+        {/* <ToggleSideBar /> */}
         <h1
           className={`${styles.header_title} text-[15px] md:text-2xl font-bold`}
         >
