@@ -31,3 +31,13 @@
   cursor: pointer;
   border-radius: 15px;
 }
+
+.active {
+  background-color: #e6edff;
+  padding: 10px 8px;
+  border-radius: 10px;
+}
+
+.icon:hover {
+  color: #e0e0e0;
+}

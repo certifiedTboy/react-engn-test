@@ -37,7 +37,7 @@ const MenuHandler = styled(motion.button)`
   background: transparent;
   position: absolute;
   top: 10px;
-  left: -50px;
+  left: -60px;
   outline: none;
   cursor: pointer;
   margin-left: 60px;

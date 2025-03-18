@@ -1,6 +1,6 @@
 import logo from "../../assets/images/logo.png";
 import gridIcon from "../../assets/images/grid.svg";
-import inboxIcon from "../../assets/images/direct-inbox.png";
+// import inboxIcon from "../../assets/images/direct-inbox.png";
 import documentIcon from "../../assets/images/document.svg";
 import volumeIcon from "../../assets/images/volume-high.svg";
 import profileIcon from "../../assets/images/profile.svg";
@@ -10,6 +10,7 @@ import signoutIcon from "../../assets/images/signout.png";
 import AppIcon from "../common/AppIcon";
 import { RiSettings3Line } from "react-icons/ri";
 import { GoHorizontalRule } from "react-icons/go";
+import { HiMiniInboxArrowDown } from "react-icons/hi2";
 import { IoMdPower } from "react-icons/io";
 
 // import { TbLogout2 } from "react-icons/tb";
@@ -34,35 +35,39 @@ const SideBar = () => {
         style={{ paddingBottom: "20px" }}
       >
         <div className="flex flex-col gap-5 items-center">
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <img src={gridIcon} alt="grid_icon" className="w-[20px]" />
           </div>
 
-          <div className="cursor-pointer">
+          {/* <div className="cursor-pointer">
             <img src={inboxIcon} alt="inbox_icon" className="w-[20px]" />
+          </div> */}
+          <div className={`cursor-pointer ${styles.active}`}>
+            <AppIcon value={{ color: "#004FFF", size: "1.3em" }}>
+              <HiMiniInboxArrowDown />
+            </AppIcon>
           </div>
-
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <img src={volumeIcon} alt="volume_icon" className="w-[20px] " />
           </div>
 
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <img src={documentIcon} alt="document_icon" className="w-[20px] " />
           </div>
 
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <img src={profileIcon} alt="profile_icon" className="w-[20px] " />
           </div>
 
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <img src={documentCopyIcon} alt="copy_icon" className="w-[20px] " />
           </div>
 
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <img src={documentTextIcon} alt="text_icon" className="w-[20px] " />
           </div>
 
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <AppIcon value={{ color: "#515050", size: "1.2em" }}>
               <RiSettings3Line />
             </AppIcon>
@@ -70,7 +75,7 @@ const SideBar = () => {
         </div>
 
         <div className="flex flex-col gap-5" style={{ marginTop: "auto" }}>
-          <div className="cursor-pointer">
+          <div className={`${styles.icon} cursor-pointer`}>
             <AppIcon value={{ color: "#515050", size: "1.2em" }}>
               <IoMdPower />
             </AppIcon>
