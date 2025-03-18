@@ -1,13 +1,13 @@
 .inbox_container {
-  width: 93%;
-  margin-left: 100px;
+  width: 100%;
+  margin-left: 70px;
   height: 100%;
   display: flex;
   gap: 10px;
 }
 
 .inbox_menu {
-  width: 25%;
+  width: 500px;
   height: 100%;
   border-right: 1px solid #e0e0e0;
   padding-top: 100px;
@@ -25,7 +25,7 @@
   padding-bottom: 30px;
 }
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
   .inbox_container {
     margin-left: 60px;
   }
@@ -43,7 +43,7 @@
   .inbox_menu_container {
     padding-left: 10px;
   }
-}
+} */
 
 .toggle_btn {
   margin-top: 110px;
