@@ -23,7 +23,7 @@
 
 ## Introduction
 
-Implement of the user interface (UI) design for Frontend react engineering test
+Implementation of the user interface (UI) design for Frontend react engineering test
 
 ## Technologies
 
