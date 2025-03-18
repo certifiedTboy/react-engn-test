@@ -3,7 +3,7 @@
   /* margin-top: 100px; */
   /* background-color: black; */
   margin-left: auto;
-  height: 100vh;
+  height: 100%;
   display: flex;
   gap: 10px;
 }

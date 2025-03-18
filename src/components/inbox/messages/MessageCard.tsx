@@ -12,14 +12,17 @@ const MessageCard = () => {
         </span>
       </div>
 
-      <div>
+      <div className="max-w-sm">
         <h3
-          className="text-[#666666] text-[12px] font-bold"
+          className="text-[#666666] text-[12px] font-bold truncate"
           style={{ marginTop: "10px" }}
         >
           Haven't gottent my refund
         </h3>
-        <p className="text-[#828282] text-[12px]" style={{ marginTop: "10px" }}>
+        <p
+          className="text-[#828282] text-[12px] truncate"
+          style={{ marginTop: "10px" }}
+        >
           is simply dummy text of the printing and typesetting industry. Lorem
           Ipsum has been the industry's standard dummy text ever since the
           1500s, when an unknown printer took a galley of type and scrambled it
