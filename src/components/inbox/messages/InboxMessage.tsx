@@ -4,18 +4,15 @@ import chatIcon from "../../../assets/images/chat.svg";
 import styles from "./Messges.module.css";
 
 const InboxMessage = () => {
-  const { showAllInbox, optionIsOpen } = useContext(MessageOptionContext);
+  const { optionIsOpen, showAllInbox } = useContext(MessageOptionContext);
 
   return (
     <div
-      className={`bg-[#f5f5f5] flex ${optionIsOpen && "w-[75%]"} ${
-        !optionIsOpen && "w-[100%]"
-      } ${
-        optionIsOpen && showAllInbox && "w-[50%]"
-      } justify-center items-center ${styles.inbox_message}`}
-      // style={{
-      //   marginLeft: `${showAllInbox && optionIsOpen ? "-10px" : "-20px"}`,
-      // }}
+      className={`bg-[#f5f5f5] flex w-full justify-center items-center ${
+        styles.inbox_message
+      } ${optionIsOpen && styles.ml_md} ${showAllInbox && styles.ml_full} ${
+        !optionIsOpen && !showAllInbox && styles.ml_av
+      }`}
     >
       <div
         className="flex flex-col items-center justify-center gap-5"

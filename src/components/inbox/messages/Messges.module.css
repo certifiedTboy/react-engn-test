@@ -2,13 +2,25 @@
   margin-top: 80px;
   border-right: 1px solid #e0e0e0;
   padding: 0 10px;
-  width: 500px;
+  width: 330px;
   height: 100vh;
 }
 
 .message_list {
   margin-top: 40px;
   height: 70%;
+}
+
+.ml_md {
+  margin-left: -23px;
+}
+
+.ml_full {
+  margin-left: -10px;
+}
+
+.ml_av {
+  margin-left: -25px;
 }
 
 .message_card {
@@ -30,11 +42,11 @@
   background-color: #e0e0e0;
 }
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
   .message_card {
     margin-left: -20px;
   }
-}
+} */
 
 .search_input {
   width: 100%;
