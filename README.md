@@ -33,9 +33,9 @@ The following technologies were used:
 - [Vite](#)
 - [Typescript](#)
 - [React router dom](#)
-- [Tailwind](#)
+- [Tailwind CSS](#)
 - [Styled components](#)
-- [Frame motion](#)
+- [Framer motion](#)
 
 ## Get-Started
 
