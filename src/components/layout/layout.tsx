@@ -4,8 +4,6 @@ import SideBar from "./SiderBar";
 import AppRoutes from "./AppRoutes";
 import { SEO } from "../../helpers/seo";
 
-// import AppR
-
 const Layout = () => {
   const location = useLocation();
 

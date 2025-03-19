@@ -1,20 +1,20 @@
-// import { useContext } from "react";
-// import { SidebarContext } from "../../context/toggle-sidebar-context";
+import { useContext } from "react";
+import { SidebarContext } from "../../context/toggle-sidebar-context";
 import AppIcon from "../common/AppIcon";
 import { IoNotificationsOutline } from "react-icons/io5";
-// import ToggleSideBar from "./ToggleSideBar";
 import styles from "./layout.module.css";
 
 const Header = () => {
-  // const { barIsOpen } = useContext(SidebarContext);
+  const { hideSideNav } = useContext(SidebarContext);
 
   return (
     <header
-      className={`${styles.header} fixed top-0 left-0 right-0  w-[100%]
+      className={`${
+        hideSideNav ? styles.header2 : styles.header
+      } fixed top-0 left-0 right-0  w-[100%]
       z-10 flex justify-between items-center h-[80px] drop-shadow-sm`}
     >
       <div className="flex items-center gap-3">
-        {/* <ToggleSideBar /> */}
         <h1
           className={`${styles.header_title} text-[15px] md:text-2xl font-bold`}
         >
