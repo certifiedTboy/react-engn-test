@@ -55,4 +55,4 @@ $ npm run dev (Development server)
 # The app will run on <http://localhost:5173/>
 ```
 
-<a href="">Happy coding!</a> <a href="#top">Back to top</a>
+<a href="">Vwolla!</a> <a href="#top">Back to top</a>
